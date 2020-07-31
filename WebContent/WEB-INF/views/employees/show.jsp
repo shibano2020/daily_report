@@ -6,7 +6,6 @@
         <c:choose>
             <c:when test="${employee != null}">
                 <h2>id : ${employee.id} の従業員情報　詳細ページ</h2>
-
                 <table>
                     <tbody>
                         <tr>
@@ -40,7 +39,6 @@
                         </tr>
                     </tbody>
                 </table>
-
                 <p><a href="<c:url value='/employees/edit?id=${employee.id}' />">この従業員情報を編集する</a></p>
             </c:when>
             <c:otherwise>
