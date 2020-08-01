@@ -27,7 +27,6 @@
                 </c:forEach>
             </tbody>
         </table>
-
         <div id="pagination">
             （全 ${reports_count} 件）<br />
             <c:forEach var="i" begin="1" end="${((reports_count - 1) / 15) + 1}" step="1">
@@ -42,6 +41,5 @@
             </c:forEach>
         </div>
         <p><a href="<c:url value='/reports/new' />">新規日報の登録</a></p>
-
     </c:param>
 </c:import>
