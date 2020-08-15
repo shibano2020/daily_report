@@ -19,6 +19,11 @@ public class ReportValidator {
             errors.add(content_error);
         }
 
+        String business_error = _validateBusiness(r.getBusiness());
+        if(!business_error.equals("")) {
+            errors.add(business_error);
+        }
+
         return errors;
     }
 
@@ -33,6 +38,14 @@ public class ReportValidator {
     private static String _validateContent(String content) {
         if(content == null || content.equals("")) {
             return "内容を入力してください。";
+            }
+
+        return "";
+    }
+
+    private static String _validateBusiness(String business) {
+        if(business == null || business.equals("")) {
+            return "商談状況を入力してください。";
             }
 
         return "";

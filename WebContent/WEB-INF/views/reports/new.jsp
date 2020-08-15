@@ -9,5 +9,5 @@
         </form>
 
         <p><a href="<c:url value='/reports/index' />">一覧に戻る</a></p>
-    </c:param>
+        </c:param>
 </c:import>

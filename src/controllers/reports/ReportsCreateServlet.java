@@ -54,6 +54,7 @@ public class ReportsCreateServlet extends HttpServlet {
 
             r.setTitle(request.getParameter("title"));
             r.setContent(request.getParameter("content"));
+            r.setBusiness(request.getParameter("business"));
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             r.setCreated_at(currentTime);
@@ -74,6 +75,7 @@ public class ReportsCreateServlet extends HttpServlet {
                 em.persist(r);
                 em.getTransaction().commit();
                 em.close();
+
                 request.getSession().setAttribute("flush", "登録が完了しました。");
 
                 response.sendRedirect(request.getContextPath() + "/reports/index");
